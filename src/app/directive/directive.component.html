@@ -1,0 +1,20 @@
+<h1>directive.component</h1>
+<p>
+  Salut, je m'appelle {{ myName }}
+</p>
+<p>
+  <input type="text" [value]="myName">
+</p>
+<p>
+  <input type="text" (input)="myName=$event.target.value" placeholder="nouveau nom">
+</p>
+<hr>
+<p *ngIf="status">p1</p>
+<p *ngIf="!status">p2</p>
+<p>
+  <button (click)="toggleStatus()">bascule paragraphes</button>
+</p>
+<hr>
+<ul>
+  <li *ngFor="let text of texts">{{ text }}</li>
+</ul>
